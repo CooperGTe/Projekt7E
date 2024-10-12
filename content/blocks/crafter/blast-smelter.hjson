@@ -1,0 +1,42 @@
+type: HeatCrafter
+size: 3
+hasItems: true
+hasLiquids: true
+drawer: {
+	type: DrawMulti
+	drawers: [
+		{
+			type: DrawRegion
+			suffix: "-bottom"
+		}
+		{
+			type: DrawLiquidTile
+			drawLiquid: slag	
+		}
+		{
+			type: DrawHeatInput
+		}
+		{
+			type: DrawDefault
+		}
+    ]
+}
+consumes: {
+	items: {
+		items: [
+			stone/5
+		]
+	}
+}
+heatRequirement: 6
+itemCapacity: 20
+craftTime: 120
+outputLiquid: slag/5
+category: crafting
+requirements: [
+	copper/30
+	lead/25
+	titanium/5
+	silicon/10
+	graphite/3
+]

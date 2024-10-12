@@ -1,0 +1,110 @@
+type: flying
+flying: true
+speed: 1.5
+lightRadius: 300
+lightOpacity: 0
+outlineColor: 28272b
+accel: 0.5
+drag: 0.01
+hitSize: 30
+health: 500
+lowAltitude: true
+armor: 30
+rotateSpeed: 1.8
+engineOffset: 22
+engineSize: 5
+engineColor: 7382f0ff
+range: 200
+maxRange: 210
+weapons: [
+  {
+    name: bhol-repulsion
+    y: -6
+    x: 10
+    rotate: true
+    mirror: true
+    outlineColor: 28272b
+    rotateSpeed: 5
+    reload: 30
+    shootSound: laser
+    autoTarget: true
+    targetInterval: 0
+    targetSwitchInterval: 0
+    bullet: {
+      type: ArtilleryBulletType
+      damage: 100
+      lifetime: 20
+      trailColor : 8ca4f5ff
+      speed: 10
+      trailLength : 10000
+      trailWidth : 1
+      fragBullets : 1
+      fragVelocityMin: 0
+      fragVelocityMax: 0
+      hitEffect:  {
+        type: multiEffect
+        effects: [
+          {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 5
+            sizeTo: 0
+            length: 0
+            layer: 200
+            clip: 8192
+            region: projectze-black-hole
+            interp: swingIn
+            lifetime: 20
+            colorFrom: 000000FF
+            colorTo: 000000FF
+          } 
+          {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 8
+            sizeTo: 3
+            length: 0
+            layer: 199
+            clip: 8192
+            spin: 3
+            region: projectze-disk-main
+            interp: swingIn
+            lifetime: 20
+            colorFrom: 8ca4f5ff
+            colorTo: 8ca4f5ff
+          } 
+          {
+            type: ParticleEffect
+            particles: 60
+            length: 80
+            lifetime: 20
+            interp: reverse
+            layer: 108
+            cone: 360
+            colorFrom: 66B1FFFF
+            colorTo: 66B1FF10
+            sizeFrom: 3
+            sizeTo: 0
+          }
+        ]
+      }
+      fragBullet: {
+          type: BombBulletType 
+          splashDamageRadius: 80
+          splashDamage: 500
+          shrinkY: 0
+          lifetime: 20
+          hitEffect: {
+            type: WaveEffect
+            lifetime: 100
+            sizeFrom: 0
+            sizeTo: 80
+            interp: swingOut
+            colorTo: 8ca4f510
+            colorFrom: ffffffff
+          }
+          color: 00000000
+        }
+    }
+  }
+]

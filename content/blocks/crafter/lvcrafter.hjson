@@ -1,0 +1,33 @@
+type: multicraft.MultiCrafter
+size: 3
+hasItems: true
+craftEffect: {
+    type: ParticleEffect
+    particles: 15
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 10
+    length: 20
+    colorFrom: ffffa3
+}
+recipes: [
+{
+  input: {
+    items: [
+      gte-copper-block/1
+	  gte-copper-rod/3
+	  gte-copper-plate/4
+    ]
+  }
+  output: {
+    items: [gte-copper-steam-motor/1]
+  }
+  craftTime: 120
+}
+]
+itemCapacity: 10
+category: crafting
+requirements: [
+  copper/60
+  lead/25
+]

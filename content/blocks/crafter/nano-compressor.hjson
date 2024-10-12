@@ -1,0 +1,77 @@
+type: GenericCrafter
+size: 4
+hasPower: true
+hasLiquids: true
+hasItems: true
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawFlame
+	  flameColor: bacdf7
+    }
+  ]
+} 
+craftEffect: {
+  type: multiEffect 
+  effects: [
+    {
+    type: ParticleEffect
+    particles: 1
+    sizeFrom: 25
+    sizeTo: 24
+    region: projectze-star
+    spin: 0.5
+    lifetime: 200
+    length: 0
+    colorFrom: bacdf7
+    colorTo: ffffff00
+    },
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 40
+    lifetime: 200
+    colorFrom: bacdf7
+    colorTo: ffffff00
+    },
+    {
+    type: ParticleEffect
+    particles: 15
+    sizeFrom: 3
+    sizeTo: 0
+    spin: 0.5
+    lifetime: 156
+    length: 40
+    colorFrom: bacdf7
+    }
+  ]
+}
+consumes: {
+  power: 200
+  items: {
+    items: [
+      titanium/10
+      graphite/9
+      siverium/10
+      arcynite/2
+    ]
+  }
+  liquid: {
+    liquid: cryofluid
+    amount: 1
+    }
+}
+itemCapacity: 50
+liquidCapacity: 25
+craftTime: 200
+outputItem: tetradecanitritanite-alloy/1
+category: crafting
+requirements: [
+  copper/80
+  silicon/40
+  titanium/5
+]

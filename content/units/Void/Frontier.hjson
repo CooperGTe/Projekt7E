@@ -1,0 +1,30 @@
+type: flying
+flying: true
+speed: 4
+accel: 0.5
+drag: 0.01
+hitSize: 10
+health: 70
+lowAltitude: true
+armor: 30
+rotateSpeed: 5
+engineOffset: 8
+engineSize: 3
+range: 5
+weapons: [
+  {
+    name: none
+    y: 0
+    x: 0
+    rotate: true
+    reload: 10
+    shootSound: laser
+    bullet: {
+      type: LightningBulletType 
+      lightningLength: 5
+      lightningLengthRand: 2
+      damage: 20
+      lightningColor: 7382f040
+      }
+   }
+]

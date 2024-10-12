@@ -1,0 +1,64 @@
+type: ItemTurret
+size: 3
+reload: 20
+health: 5960
+range: 200
+rotateSpeed: 2
+hasItems: true
+hasPower: true
+consumes: {
+  power: 12.5
+}
+maxAmmo: 10
+recoil: 2.1
+shootSound: laser
+drawer: {
+  type: drawTurret
+  basePrefix: volcano-
+}
+ammoTypes: {
+  coal: {
+    type: LaserBulletType
+    length: 120
+    width: 10
+    damage: 10
+    status: burning
+    statusDuration: 10
+    colors: [df9b6140 df9b61 ffffff]
+  }
+  pyratite: {
+    type: LaserBulletType
+    length: 170
+    width: 12.5
+    reloadMultiplier: 0.5
+    damage: 40
+    status: melting
+    statusDuration: 18
+    colors: [f8b7ab40 f8b7ab ffffff]
+  }
+  blast-compound: {
+    type: LaserBulletType
+    length: 200
+    width: 15
+    reloadMultiplier: 2
+    damage: 50
+    status: melting
+    statusDuration: 30
+    colors: [f5e0dc40 f5e0dc ffffff]
+  }
+  voliuminite: {
+    type: LaserBulletType
+    length: 222
+    width: 25
+    reloadMultiplier: 0.4
+    damage: 1695
+    status: melting
+    statusDuration: 128
+    colors: [c7affd40 c7affd ffffff]
+  }
+}
+requirements: [
+  tetradecanitritanite-alloy/50
+  copper/60
+]
+category: turret

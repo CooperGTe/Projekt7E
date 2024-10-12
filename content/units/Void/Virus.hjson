@@ -1,0 +1,142 @@
+type: missile
+controller: MissileAI
+flying: true
+speed: 5
+missileAccelTime: 60
+lifetime: 200
+drag: 0.01
+hitSize: 5
+health: 500
+physics: false
+isEnemy: false
+deathEffect: none
+useUnitCap: false
+createWreck: false
+createScorch: true
+hidden: true
+allowedInPayloads: false
+playerControllable: false
+lowAltitude: true 
+armor: 30
+rotateSpeed: 5
+engineOffset: 0
+engineSize: 0
+engineColor: bacdf7ff
+trailColor: bacdf7ff
+trailLength: 30
+maxRange: 10
+weapons: [
+  {
+    name: none
+    shootCone: 360
+    shootOnDeath: true
+    controllable: true
+    shootSound: desolationimpact
+    bullet: {
+      type: ExplosionBulletType
+      shootEffect: {
+        type: multiEffect
+        effects: [
+          {
+            type: ParticleEffect
+            particles: 1
+            region: projectze-star
+            lifetime: 100
+            spin: 0
+            sizeFrom: 80
+            sizeTo: 0
+            length: 0
+            colorTo: 7382f0ff
+            colorFrom: ffffffff
+          }
+          {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 6
+            sizeTo: 0
+            lifetime: 80
+            spin: 8
+            length: 0
+            layer: 112
+            interp: swingIn
+            region: projectze-black-hole
+            colorFrom: 000000ff
+            colorTo: 000000ff
+          }
+          {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 100
+            lifetime: 100
+            colorFrom: 7382f0ff
+            colorTo: ffffffff
+          }
+          {
+            type: ParticleEffect
+            particles: 1
+            region: projectze-disk
+            lifetime: 100
+            spin: 100
+            sizeFrom: 80
+            sizeTo: 100
+            length: 0
+            colorTo: 7382f000
+            colorFrom: ffffff90
+          }
+        ]  
+      }
+      killShooter: true
+      instantDisappear: false
+      parts: [
+        {
+        type: FlarePart
+        progress: life
+        rotation: 86
+        color1: 66B1FFFF
+        stroke: 6.5
+        radius: 70
+        radiusTo: 20
+        }
+      ]
+      width: 7
+      height: 7
+      sprite: circle-bullet
+      frontColor: FFFFFF
+      backColor: 66B1FFFF
+      splashDamage: 3800
+      splashDamageRadius: 80
+      shrinkY: 0
+      shrinkX: 0
+      status: blasted
+      statusDuration: 100
+      trailColor: 66B1FFFF
+      trailParam: 6
+      trailLength: 12
+      trailWidth: 3
+    }
+  }
+]
+abilities: [
+  {
+    type: MoveEffectAbility
+    effect: {
+      type: ParticleEffect
+      particles: 7
+      sizeFrom: 3
+      sizeTo: 5
+      length: 50
+      lifetime: 60
+      lightOpacity: 0
+      interp: circleOut
+      sizeInterp: pow5In
+      colorFrom: 66B1FFAa
+      colorTo: 78787870
+      cone: 15
+    }
+    interval: 3
+    y: -5
+    rotateEffect: true
+    rotation: 180
+    }
+]
+

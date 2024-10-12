@@ -1,0 +1,30 @@
+type: GenericCrafter  
+health: 500
+size: 2
+hasItems: true
+drawer: {
+	type: DrawMulti
+	drawers: [  
+		{
+		type: DrawDefault
+		}
+		{
+		type: DrawRegion
+		spinSprite: true
+		rotateSpeed: 0.4
+		suffix: "-rotator"
+		}
+		{
+		type: DrawRegion
+		suffix: "-top"
+		}
+	]
+}
+outputItem: stone/1
+craftTime: 60
+craftEffect: mineBig
+updateEffect: pulverizeMedium
+category: production
+requirements: [
+	copper/25
+]

@@ -1,0 +1,45 @@
+type: GenericCrafter
+size: 2
+hasPower: true
+hasItems: true
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawFlame
+	flameColor: ffffa3
+	  }
+    ]
+  }
+craftEffect: {
+    type: ParticleEffect
+    particles: 15
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 10
+    length: 20
+    colorFrom: ffffa3
+}
+consumes: {
+  power: 1
+  items: {
+    items: [
+      silicon/2
+      copper/3
+    ]
+  }
+}
+itemCapacity: 20
+craftTime: 50
+outputItem: siverium/1
+category: crafting
+requirements: [
+  copper/30
+  lead/25
+  titanium/5
+  silicon/10
+  graphite/3
+]

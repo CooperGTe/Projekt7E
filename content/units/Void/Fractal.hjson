@@ -1,0 +1,64 @@
+type: flying
+flying: true
+speed: 0.5
+accel: 0.5
+drag: 0.01
+hitSize: 60
+health: 5000
+lowAltitude: true
+armor: 30
+rotateSpeed: 0.8
+engineOffset: 45
+engineSize: 7
+range: 20
+weapons: [
+  {
+    name: none
+    x: 0
+    y: 30
+    mirror: false
+    rotate: false
+    rotateSpeed: 10
+    reload: 30
+    recoil: 3
+    shake: 2
+    shoot: {
+      firstShotDelay: 30
+    }
+    bullet: {
+      type: LaserBulletType
+      length: 220
+      width: 30
+      damage: 200
+      chargeEffect: {
+        type: multiEffect
+        effects: [
+          {
+            type: ParticleEffect
+            particles: 1
+            region: exotictech-sqreee
+            lifetime: 30
+            spin: 100
+            sizeFrom: 100
+            sizeTo: 20
+            length: 0
+            colorTo: 7382f0ff
+            colorFrom: ffffff00
+          }
+          {
+            type: WaveEffect
+            sizeFrom: 100
+            sizeTo: 0
+            lifetime: 30
+            colorFrom: 7382f0ff
+            colorTo: ffffffff
+          }
+        ]
+      }
+      radius: 500
+      powerDamageScl: 7
+      powerSclDecrease: 5
+      unitDamageScl: 7
+    }
+  }
+]

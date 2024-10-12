@@ -1,0 +1,164 @@
+type: flying
+flying: true
+speed: 0.5
+accel: 0.5
+drag: 0.1
+hitSize: 100
+health: 69420
+lowAltitude: true
+armor: 30
+outlineColor: 27272b
+rotateSpeed: 0.6
+engineOffset: 75
+engineSize: 15
+engineColor: bacdf7ff
+lightOpacity: 0
+range: 200
+weapons: [
+  {
+  name: none
+  y: 30
+  reload: 50
+  ejectEffect: casing1
+  mirror: false
+  autoTarget: true
+  shootSound: none
+  bullet: {
+    type: EmpBulletType
+    damage: 30
+    speed: 10.1
+    width:10
+    height: 80
+    frontColor: ffffff
+    backColor: ffffff
+    lifetime: 50
+    radius: 500
+    powerDamageScl: 10
+    powerSclDecrease: 5
+    unitDamageScl: 10
+    lightningColor: 7382f040
+    lightning: 8
+    lightningLength: 15
+    lightningLengthRand: 5
+    lightningDamage: 100
+    }
+  }
+  {
+  name: laser-pulse
+  x: 25
+  y: -20
+  mirror: true
+  outlineColor: 27272b
+  rotate: true
+  rotateSpeed: 18
+  reload: 20
+  recoil: 3
+  shake: 2
+  shootSound: laser
+  shoot: {
+    firstShotDelay: 20
+  }
+  bullet: {
+    type: LaserBulletType
+    length: 320
+    width: 30
+    damage: 800
+    chargeEffect: {
+      type: WaveEffect
+      sizeFrom: 50
+      sizeTo: 0
+      lifetime: 20
+      colorFrom: 000000ff
+      colorTo: ffffffff
+    }
+    shootEffect: {
+      type: multiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          particles: 1
+          region: projectze-star
+          lifetime: 50
+          spin: 1
+          sizeFrom: 20
+          sizeTo: 0
+          length: 0
+          colorTo: 7382f0ff
+          colorFrom: ffffffff
+        }
+        {
+          type: WaveEffect
+          sizeFrom: 0
+          sizeTo: 50
+          lifetime: 10
+          colorFrom: 7382f0ff
+          colorTo: ffffffff
+        }
+      ]
+    }
+    hitEffect: {
+      type: WaveEffect
+      sizeFrom: 50
+      sizeTo: 0
+      lifetime: 10
+      colorFrom: 7382f0ff
+      colorTo: ffffffff
+    }
+    colors: [7382f040 ffffff ffffff]
+    fragBullet: {
+      type: EmpBulletType
+      lifetime: 50
+      speed: 5
+      damage: 20
+      radius: 50
+      powerDamageScl: 10
+      powerSclDecrease: 5
+      unitDamageScl: 10
+      lightningColor: 7382f040
+      lightning: 1
+      lightningLength: 15
+      lightningLengthRand: 5
+      lightningDamage: 100
+      frontColor: 7382f040
+      backColor: 7382f040
+      }
+    }
+  }
+  {
+ 	name: unit
+  reload: 200
+  x: 40
+  y: 0
+  mirror: true
+  baseRotation: 270
+  alternate: true
+  rotate: false
+  shootSound: shootBig
+  layerOffset: -1
+  shootCone: 180
+	bullet: {
+    type: basicBulletType
+    spawnUnit: Virus
+    }
+	}
+]
+abilities: [
+    {
+    type: EnergyFieldAbility
+    shootSound: none
+    y: -26.5
+    color: 7382f00
+    maxTargets: 50
+    healPercent: 5
+    damage: 100
+    range: 150
+    sectors: 3
+    blinkScl: 80
+    rotateSpeed: 3
+    hitBuildings: true
+    sectorRad: 0.18
+    effectRadius: 5.6
+    reload: 80
+    }
+  ]
+ 

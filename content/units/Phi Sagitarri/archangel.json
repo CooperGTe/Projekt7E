@@ -1,0 +1,154 @@
+{
+    "name": "archangel",
+    "groundLayer": 80,
+    "type": "legs",
+    "armor": 100,
+    "health": 800000,
+    "hitSize": 120,
+    "outlineColor": 262121,
+    "rotateSpeed": 0.8,
+    "speed": 0.2,
+    "drownTimeMultiplier": 0.5,
+    "targetAir": true,
+    "singleTarget": true,
+    "range": 500,
+
+    "legCount": 6,
+    "legMoveSpace": 0.3,
+    "legMaxLength": 1,
+    "legMinLength": 0.8,
+    "legExtension": -20,
+    "legLength": 120,
+    "legPairOffset": 3,
+    "legBaseOffset": 10,
+    "legSpeed": 0.5,
+    "legContinuousMove": true,
+    "rippleScale": 8,
+    "legSplashDamage": 500,
+    "legSplashRange": 10,
+    "allowLegStep": true,
+    "hovering": true,
+
+    "shadowElevation": 1,
+    "flying": false,
+
+    "weapons": [ 
+        {
+            "name": "angel-scream",
+            "shootSound": "heavy-laser",
+            "chargeSound": "ramiel-scream",
+            "continuous": true,
+            "reload": 180,
+            "mirror": false,
+            "top": false,
+            "x": 0,
+            "y": 0,
+            "shootY": 40,
+            "recoil": 10,
+            "predictTarget": false,
+            "shootCone": 60,
+            "parentizeEffects": true,
+            "shoot": {
+                "firstShotDelay": 180
+            },
+            "bullet": {
+                "type": "ContinuousLaserBulletType",
+                "width": 15,
+                "length": 1800,
+                "lifetime": 180,
+                "damage": 500,
+                "frontLength": 30,
+                "backLength": 29,
+                "colors": [
+                    "c1Ecffff", 
+                    "86ceebb3", 
+                    "6585b0aa", 
+                    "7089ea55"
+                ],
+                "chargeEffect": [
+                    {
+                        "type": "ParticleEffect",
+                        "followParent": true,
+                        "rotWithParent": true,
+                        "particles": 40,
+                        "sizeFrom": 2,
+                        "sizeTo": 0,
+                        "lifetime": 180,
+                        "length": 500,
+                        "layer": 110,
+                        "interp": "reverse",
+                        "lightColor": "ffffffff",
+                        "colorFrom": "bacdf700",
+                        "colorTo": "8ca4f5ff"
+                    }
+                ],
+                "shootEffect": [
+                    {
+                        "type": "WaveEffect",
+                        "followParent": true,
+                        "rotWithParent": true,
+                        "sizeFrom": -1,
+                        "sizeTo": 200,
+                        "lifetime": 50,
+                        "colorFrom": "c1ecffff",
+                        "colorTo": "c1ecff00",
+                        "strokeFrom": 3,
+                        "strokeTo": 3,
+                        "interp": "pow4Out"
+                    }
+                ]
+            },
+            "parts": [
+                {
+                    "type": "shapePart",
+                    "progress": {
+                        "type": "charge",
+                        "op": "curve",
+                        "interp": "pow5In"
+                    },
+                    "color": "c0ecff",
+                    "colorTo": "c0ecff",
+                    "hollow": true,
+                    "stroke": 0,
+                    "strokeTo": 2,
+                    "radiusTo": 0,
+                    "radius": 100,
+                    "y": 40,
+                    "circle": true,
+                    "layer": 110,
+                    "rotateSpeed": 1
+                },
+                {
+                    "type": "FlarePart",
+                    "progress": {
+                        "type": "charge",
+                        "op": "curve",
+                        "interp": "pow5In"
+                    },
+                    "color1": "ffffff",
+                    "color2": "c0ecff",
+                    "layer": 110,
+                    "radius": 0,
+                    "radiusTo": 100,
+                    "spinSpeed": 3,
+                    "y": 40
+                },
+                {
+                    "type": "FlarePart",
+                    "progress": {
+                        "type": "recoil",
+                        "op": "curve",
+                        "interp": "pow5Out"
+                    },
+                    "color1": "ffffff",
+                    "color2": "c0ecff",
+                    "layer": 110,
+                    "radius": 0,
+                    "radiusTo":100,
+                    "spinSpeed": 0,
+                    "y": 40
+                }
+            ]
+        }
+    ]
+}

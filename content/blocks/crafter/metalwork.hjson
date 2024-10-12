@@ -1,0 +1,43 @@
+type: multicraft.MultiCrafter
+size: 2
+hasItems: true
+craftEffect: {
+    type: ParticleEffect
+    particles: 15
+    sizeFrom: 3
+    sizeTo: 0
+    lifetime: 10
+    length: 20
+    colorFrom: ffffa3
+}
+recipes: [
+{
+  input: gte-copper-plate/1
+  output: {
+    items: [gte-copper-wire/1]
+  }
+  craftTime: 10
+}
+{
+  input: {
+    items: gte-copper-plate/1
+  }
+  output: {
+    items: [gte-copper-rod/2]
+  }
+  craftTime: 15
+}
+{
+  input: gte-lead-plate/1
+  output: {
+	items: [gte-lead-rod/2]
+  }
+  craftTime: 20
+}
+]
+itemCapacity: 10
+category: crafting
+requirements: [
+  copper/30
+  lead/25
+]

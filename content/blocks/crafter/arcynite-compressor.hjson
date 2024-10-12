@@ -1,0 +1,49 @@
+type: GenericCrafter
+size: 2
+hasPower: true
+hasItems: true
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+    type: DrawDefault
+    }
+    {
+    type: DrawFlame
+	flameColor: bacdf7
+    }
+  ]
+}  
+craftEffect: {
+    type: ParticleEffect
+    particles: 1
+    sizeFrom: 15
+    sizeTo: 15
+    region: exotictech-star
+    spin: 0.5
+    lifetime: 20
+    length: 0
+    colorFrom: bacdf7
+    colorTo: ffffff00
+    }
+consumes: {
+  power: 80
+  items: {
+    items: [
+      surge-alloy/10
+      copper/5
+    ]
+  }
+}
+itemCapacity: 20
+craftTime: 100
+outputItem: arcynite/1
+category: crafting
+requirements: [
+  copper/180
+  lead/160
+  thorium/20
+  silicon/10
+  surge-alloy/20
+  siverium/7
+]

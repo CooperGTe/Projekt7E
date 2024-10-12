@@ -1,0 +1,11 @@
+type: Conduit
+health: 800
+leaks: true
+placeableLiquid: true
+liquidPreasure: 16
+liquidCapacity: 320
+category: liquid
+requirements: [
+  titanium/4
+  metaglass/4
+]
